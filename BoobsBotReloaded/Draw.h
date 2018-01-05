@@ -94,12 +94,31 @@ namespace Draw
 		}
 	};
 
+	enum Font : int
+	{
+		SmallDev,
+		BigDev,
+		Console,
+		Big,
+		Small,
+		Bold,
+		Normal,
+		ExtraBig,
+		Objective
+	};
 
-	std::map<char*, int*> Fonts;
-	std::map<char*, int*> Shaders;
+	enum Shader : int
+	{
+		White
+	};
 
 	namespace internal
 	{
+		std::map<int, int*> Fonts;
+		std::map<int, int*> Shaders;
+
+		void InitializeFonts();
+		void InitializeShaders();
 
 		class ScreenMatrix
 		{
@@ -127,6 +146,8 @@ namespace Draw
 	}
 
 	ScreenLocation WorldToScreen(WorldLocation world_location);
-	void DrawString(char* string, ScreenLocation screen_location, char* font, Color color);
-	void DrawShader(char* shader, ScreenLocation screen_location, ScreenSize screen_size, float angle, Color color);
+	void DrawString(char* string, ScreenLocation screen_location, Font font, Color color);
+	void DrawShader(Shader shader, ScreenLocation screen_location, ScreenSize screen_size, float angle, Color color);
+
+	void Initialize();
 }

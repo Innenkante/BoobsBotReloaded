@@ -24,6 +24,9 @@
     <ClInclude Include="Draw.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="Hook.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -36,6 +39,9 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="Draw.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Hook.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>
