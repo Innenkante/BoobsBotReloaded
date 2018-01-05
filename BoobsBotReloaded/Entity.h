@@ -24,6 +24,7 @@ enum EntityType : short
 
 class Entity
 {
+public:
 	char _0x0000[0x2];
 	short Valid;
 	char _0x0004[0x10];
