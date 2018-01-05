@@ -1,5 +1,4 @@
 #include "stdafx.h"
-#include "Draw.h"
 
 Draw::ScreenLocation Draw::WorldToScreen(WorldLocation world_location)
 {

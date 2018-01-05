@@ -5,8 +5,8 @@ namespace Hook
 {
 	namespace internal
 	{
-		std::function<void()> UiCallback;
-		std::function<void()> FrameCallback;
+		static std::function<void()> UiCallback;
+		static std::function<void()> FrameCallback;
 		void* DetourFunction(BYTE * src, const BYTE * dst, const int len);
 	}
 

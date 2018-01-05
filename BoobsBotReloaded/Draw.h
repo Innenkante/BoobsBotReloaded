@@ -114,8 +114,8 @@ namespace Draw
 
 	namespace internal
 	{
-		std::map<int, int*> Fonts;
-		std::map<int, int*> Shaders;
+		static std::map<int, int*> Fonts;
+		static std::map<int, int*> Shaders;
 
 		void InitializeFonts();
 		void InitializeShaders();
@@ -135,14 +135,14 @@ namespace Draw
 		using DrawStringPrototype = int(__cdecl*)(char* string, int string_size, int* font, float x, float y, float scale_x, float scale_y, float unknown_0, float color[4], int unknown_1);
 		using DrawRotatedPicturePrototype = int(__cdecl*)(ScreenMatrix* screen_matrix, float x, float y, float w, float h, float angle, float color[4], int* shader);
 
-		auto GetScreenMatrix = (GetScreenMatrixPrototype)0x004B6350;
-		auto WorldToScreen = (WorldToScreenPrototype)0x004E5FC0;
+		static auto GetScreenMatrix = (GetScreenMatrixPrototype)0x004B6350;
+		static auto WorldToScreen = (WorldToScreenPrototype)0x004E5FC0;
 
-		auto RegisterShader = (RegisterShaderPrototype)0x0041B6B0;
-		auto RegisterFont = (RegisterFontPrototype)0x004FB960;
+		static auto RegisterShader = (RegisterShaderPrototype)0x0041B6B0;
+		static auto RegisterFont = (RegisterFontPrototype)0x004FB960;
 
-		auto DrawString = (DrawStringPrototype)0x0042C970;
-		auto DrawRotatedPicture = (DrawRotatedPicturePrototype)0x0042F420;
+		static auto DrawString = (DrawStringPrototype)0x0042C970;
+		static auto DrawRotatedPicture = (DrawRotatedPicturePrototype)0x0042F420;
 	}
 
 	ScreenLocation WorldToScreen(WorldLocation world_location);

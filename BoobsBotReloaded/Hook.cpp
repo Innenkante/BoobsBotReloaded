@@ -1,5 +1,4 @@
 #include "stdafx.h"
-#include "Hook.h"
 
 void * Hook::internal::DetourFunction(BYTE * src, const BYTE * dst, const int len)
 {
