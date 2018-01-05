@@ -144,6 +144,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="CG.h" />
+    <ClInclude Include="CGS.h" />
     <ClInclude Include="Client.h" />
     <ClInclude Include="Console.h" />
     <ClInclude Include="Draw.h" />
@@ -153,7 +154,9 @@
     <ClInclude Include="Misc.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="Trace.h" />
     <ClInclude Include="Vector.h" />
+    <ClInclude Include="RefDef.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BoobsBotReloaded.cpp" />

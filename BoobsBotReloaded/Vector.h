@@ -21,8 +21,9 @@ public:
 
 class Vector3D
 {
-	float X, Y, Z;
 public:
+	float X, Y, Z;
+
 	Vector3D(float x, float y, float z)
 	{
 		X = x;

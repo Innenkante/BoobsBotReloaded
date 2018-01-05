@@ -48,6 +48,15 @@
     <ClInclude Include="CG.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="Trace.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="RefDef.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="CGS.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
