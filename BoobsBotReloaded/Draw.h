@@ -20,12 +20,6 @@ namespace Draw
 			X = screen_location[0];
 			Y = screen_location[1];
 		}
-
-		float* ToFloatArray()
-		{
-			float float_array[] = { X,Y };
-			return float_array;
-		}
 	};
 
 	class WorldLocation
@@ -48,13 +42,6 @@ namespace Draw
 			Y = world_location[1];
 			Z = world_location[2];
 		}
-
-		float* ToFloatArray()
-		{
-			float float_array[] = { X,Y,Z};
-			return float_array;
-		}
-
 	};
 
 
@@ -85,12 +72,6 @@ namespace Draw
 			B = b;
 			G = g;
 			Alpha = alpha;
-		}
-
-		float* ToFloatArray()
-		{
-			float float_array[] = { R,G,B,Alpha };
-			return float_array;
 		}
 	};
 

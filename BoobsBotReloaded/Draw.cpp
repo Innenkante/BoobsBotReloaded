@@ -3,20 +3,22 @@
 Draw::ScreenLocation Draw::WorldToScreen(WorldLocation world_location)
 {
 	float screen_location[2];
-
-	internal::WorldToScreen(0, internal::GetScreenMatrix(), world_location.ToFloatArray(), screen_location);
+	float world_location_f[] = { world_location.X,world_location.Y,world_location.Z };
+	internal::WorldToScreen(0, internal::GetScreenMatrix(), world_location_f, screen_location);
 
 	return ScreenLocation(screen_location);
 }
 
 void Draw::DrawString(char * string, ScreenLocation screen_location, Font font, Color color)
 {
-	internal::DrawString(string, strlen(string), internal::Fonts[font], screen_location.X, screen_location.Y, 1.f, 1.f, 0.f, color.ToFloatArray(), 0);
+	float color_f[] = { color.R,color.G,color.B,color.Alpha };
+	internal::DrawString(string, 0x7FFFFFFF, internal::Fonts[font], screen_location.X, screen_location.Y, 1.f, 1.f, 0.f, color_f, 0);
 }
 
 void Draw::DrawShader(Shader shader, ScreenLocation screen_location, ScreenSize screen_size, float angle, Color color)
 {
-	internal::DrawRotatedPicture(internal::GetScreenMatrix(), screen_location.X, screen_location.Y, screen_size.Width, screen_size.Height, angle, color.ToFloatArray(), internal::Shaders[shader]);
+	float color_f[] = { color.R,color.G,color.B,color.Alpha };
+	internal::DrawRotatedPicture(internal::GetScreenMatrix(), screen_location.X, screen_location.Y, screen_size.Width, screen_size.Height, angle, color_f, internal::Shaders[shader]);
 }
 
 

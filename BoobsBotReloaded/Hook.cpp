@@ -51,7 +51,7 @@ __declspec(naked) void HkFrame()
 
 	__asm PUSH ESI
 	__asm MOV ESI, [ESP + 8]
-		__asm PUSH ESI
+	__asm PUSH ESI
 
 	__asm JMP[HkFrameJmp]
 }
